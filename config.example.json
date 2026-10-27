@@ -1,0 +1,42 @@
+{
+  "version": 2,
+  "name": "dev1",
+  "architecture": "aarch64",
+  "os": "ubuntu-24.04",
+  "resources": {
+    "memory_mib": 4096,
+    "cpus": 4,
+    "disk_gib": 32
+  },
+  "hardware": {
+    "uuid": "e8d86847-eaab-4a76-95c4-d659f9dc85d2",
+    "mac": "52:54:00:12:34:56",
+    "disk_serial": "VM0011223344556677",
+    "machine_id": "8f4ba026ba0f4a8a86d3024dbf4e071a",
+    "smbios": {
+      "manufacturer": "Generic",
+      "product": "ARM64 Workstation",
+      "version": "1.0",
+      "serial": "EXAMPLE-0001"
+    },
+    "hostname": "dev1"
+  },
+  "network": {
+    "mode": "restricted-socks5",
+    "host_socks_host": "127.0.0.1",
+    "host_socks_port": 7891,
+    "guest_socks_host": "10.0.2.100",
+    "guest_socks_port": 1080,
+    "ssh_host_port": 2222,
+    "udp_bridge_host_port": 18789
+  },
+  "cloudinit_instance": "e5657bb3-99ab-4c4a-aa14-5322bd6af7b9",
+  "firmware": "auto",
+  "shares": [
+    {
+      "name": "projects",
+      "host": "/Users/YOUR_MAC_USER/workspaces",
+      "guest": "/home/vmuser/projects"
+    }
+  ]
+}

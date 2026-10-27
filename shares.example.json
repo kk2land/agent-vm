@@ -1,0 +1,12 @@
+[
+  {
+    "name": "projects",
+    "host": "/Users/YOUR_MAC_USER/workspaces",
+    "guest": "/home/vmuser/projects"
+  },
+  {
+    "name": "exchange",
+    "host": "/Users/YOUR_MAC_USER/Shared/agent-data",
+    "guest": "/mnt/exchange"
+  }
+]

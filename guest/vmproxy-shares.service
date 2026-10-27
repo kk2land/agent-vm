@@ -1,0 +1,11 @@
+[Unit]
+Description=Mount explicitly configured macOS directories via virtio-9p
+After=local-fs.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/local/sbin/vmproxy-mounts
+
+[Install]
+WantedBy=multi-user.target

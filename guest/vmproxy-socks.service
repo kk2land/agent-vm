@@ -1,0 +1,15 @@
+[Unit]
+Description=Local SOCKS5 TCP and UDP transport via restricted QEMU guest forwarding
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/sbin/vmproxy-socks --listen 1081
+Restart=always
+RestartSec=2
+NoNewPrivileges=true
+User=vmuser
+
+[Install]
+WantedBy=multi-user.target

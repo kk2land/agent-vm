@@ -1,0 +1,16 @@
+[Unit]
+Description=Full TCP/IP tunnel to guest-accessible SOCKS5 proxy (fail-closed outside QEMU)
+Wants=network-online.target vmproxy-socks.service
+Requires=vmproxy-socks.service
+After=network-online.target vmproxy-socks.service
+
+[Service]
+Type=simple
+ExecStartPre=/usr/local/sbin/vmproxy-route
+ExecStart=/usr/local/bin/tun2socks --device tun://tun0 --proxy socks5://127.0.0.1:1081 --loglevel info
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

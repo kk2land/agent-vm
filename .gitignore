@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.local/
+*.download
+*.qcow2
+*.iso
+*.log
+*.pid
+id_ed25519*
+my-shares.json
